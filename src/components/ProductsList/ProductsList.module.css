@@ -1,0 +1,38 @@
+.result_container {
+    background-color: #fff;
+    max-height: 200px;
+    overflow-y: scroll;
+  }
+
+  .result_list {
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    cursor: pointer;
+  }
+  
+  .result_list:hover {
+    background-color: #E2E8F0;
+  }
+  
+  
+  
+  .product_title {
+    font-weight: 500;
+  }
+
+  .product_image {
+    width: 20px;
+  }
+
+  .highlight {
+    background-color: yellow;
+  }
+
+  
+  
+  
+
+  

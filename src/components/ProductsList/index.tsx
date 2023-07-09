@@ -4,28 +4,28 @@ import styles from './ProductsList.module.css';
 
 import { Product } from '../../product-type';
 
-interface ProductListProps {
+interface ProductsListProps {
   products: Product[];
   handleProductClick: (product: Product) => void;
   
 };
 
-const ProductList: React.FC<ProductListProps> = ({
+const ProductList: React.FC<ProductsListProps> = ({
   products,
   handleProductClick,
   
 }) => {
   return (
-    <div className={styles.resultProductContainer}>
+    <div className={styles.result_container}>
       {products.map((product) => (
         <div
           key={product.id}
           
-          className={styles.resultList}
+          className={styles.result_list}
           onClick={() => handleProductClick(product)}
         >
-          <p className="productTitle">{(product.title)}</p>
-          <img src={product.image} alt="product-image" className={styles.productImage} />
+          <p className={styles.product_title}>{(product.title)}</p>
+          <img src={product.image} alt="product-image" className={styles.product_image} />
         </div>
       ))}
     </div>
