@@ -1,0 +1,10 @@
+.my_container {
+    display: flex;
+    flex-direction: column;
+    max-width: 32rem; 
+    margin-top: 10rem; 
+    margin-left: auto; 
+    margin-right: auto; 
+    font-family: 'Fira Code', monospace; 
+  }
+  

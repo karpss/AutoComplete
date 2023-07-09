@@ -8,6 +8,8 @@ import ProductsList from '../ProductsList';
 import { useProducts } from '../../hooks/useProducts';
 import { useSearchResults } from '../../hooks/useSearchResults';
 import { Product } from '../../product-type';
+import styles from './AutocompleteSearch.module.css';
+
 
 
 const AutocompleteSearch = () => {
@@ -27,7 +29,7 @@ const AutocompleteSearch = () => {
   };
 
   return (
-    <div >
+    <div   className={styles.my_container}>
       <SearchInputBar
         value={query}
         onChange={handleQueryChange}
@@ -43,7 +45,9 @@ const AutocompleteSearch = () => {
         />
       )}
       
-      
+      {query !== '' && searchResults.length === 0 && (
+          <div>No Matches Found</div>
+      )}
       
     </div>
   );
