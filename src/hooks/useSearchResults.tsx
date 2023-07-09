@@ -1,8 +1,7 @@
-/* eslint-disable */ 
 import { useState, useEffect } from 'react';
 import { Product } from '../product-type';
 
-export const useSearchResults = (products: Product[], query: string) => {
+function useSearchResults(products: Product[], query: string) {
   const [searchResults, setSearchResults] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -14,4 +13,6 @@ export const useSearchResults = (products: Product[], query: string) => {
   }, [query, products]);
 
   return { searchResults };
-};
+}
+
+export default useSearchResults;

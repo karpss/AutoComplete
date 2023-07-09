@@ -1,8 +1,7 @@
-/* eslint-disable */ 
 import { useState, useEffect } from 'react';
 import { Product } from '../product-type';
 
-export const useProducts = () => {
+function useProducts() {
   const [products, setProducts] = useState<Product[]>([]);
   const [error, setError] = useState<string | null>(null);
 
@@ -14,8 +13,8 @@ export const useProducts = () => {
       }
       const data = await response.json();
       setProducts(data);
-    } catch (error) {
-      setError((error as Error).message);
+    } catch (err) {
+      setError((err as Error).message);
     }
   };
 
@@ -24,4 +23,6 @@ export const useProducts = () => {
   }, []);
 
   return { products, error };
-};
+}
+
+export default useProducts;

@@ -1,17 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 
 body {
   background: lightblue;
-}
-
-.result_container::-webkit-scrollbar {
-  width: 8px;
-  height: 20px;
-  border-radius: 10px;
-  background: #e0cbcb;
-}
-.result_container::-webkit-scrollbar-thumb {
-  background: #d2a231;
-  border-radius: 10px;
 }

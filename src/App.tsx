@@ -1,14 +1,11 @@
-/* eslint-disable */ 
-import AutocompleteSearch from "./components/AutocompleteSearch";
+import AutocompleteSearch from './components/AutocompleteSearch';
 
-export default function App() {
+function App() {
   return (
-  
-  <div>
-  
-  <AutocompleteSearch/>
-  
-  
-  </div>
-  )
+    <div>
+      <AutocompleteSearch />
+    </div>
+  );
 }
+
+export default App;

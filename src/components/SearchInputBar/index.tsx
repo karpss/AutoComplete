@@ -1,6 +1,5 @@
-/* eslint-disable */ 
-import React from "react";
-import styles from "./SearchInputBar.module.css";
+import React from 'react';
+import styles from './SearchInputBar.module.css';
 
 type SearchInputBarProps = {
   value: string;
@@ -9,31 +8,27 @@ type SearchInputBarProps = {
   placeholder: string;
 };
 
-
-const SearchInputBar:  React.FC<SearchInputBarProps>  = ({
-    
+function SearchInputBar({
   value,
   onChange,
   inputRef,
   placeholder,
-}) => {
+}: SearchInputBarProps) {
   return (
-    
-  <>
-  <label htmlFor="my-input">My Input:</label>
-  <input
-    type="text"
-    id="my-input"
-    className={styles.my_input}
-    value={value}
-    onChange={onChange}
-    ref={inputRef}
-    placeholder={placeholder}
-    aria-label="My Input"
-  />
-</>
-  )
-};
+    <label htmlFor="my-input">
+      My Input:
+      <input
+        type="text"
+        id="my-input"
+        className={styles.my_input}
+        value={value}
+        onChange={onChange}
+        ref={inputRef}
+        placeholder={placeholder}
+        aria-label="My Input"
+      />
+    </label>
+  );
+}
 
-  
-  export default SearchInputBar;
+export default SearchInputBar;
