@@ -3,16 +3,19 @@ import React from 'react';
 import styles from './ProductsList.module.css';
 
 import { Product } from '../../product-type';
+import { HighlightTitleText } from '../../util/HighlightTitleText';
 
 interface ProductsListProps {
   products: Product[];
   handleProductClick: (product: Product) => void;
-  
+  highlightedText: string;
+
 };
 
 const ProductList: React.FC<ProductsListProps> = ({
   products,
   handleProductClick,
+  highlightedText
   
 }) => {
   return (
@@ -24,7 +27,7 @@ const ProductList: React.FC<ProductsListProps> = ({
           className={styles.result_list}
           onClick={() => handleProductClick(product)}
         >
-          <p className={styles.product_title}>{(product.title)}</p>
+          <p className={styles.product_title}>{HighlightTitleText(product.title, highlightedText)}</p>
           <img src={product.image} alt="product-image" className={styles.product_image} />
         </div>
       ))}
