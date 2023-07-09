@@ -10,7 +10,7 @@ interface ProductsListProps {
   highlightedText: string;
 }
 
-function ProductList({
+function ProductsList({
   products,
   handleProductClick,
   highlightedText,
@@ -47,4 +47,4 @@ function ProductList({
   );
 }
 
-export default ProductList;
+export default ProductsList;
