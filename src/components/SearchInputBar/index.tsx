@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './SearchInputBar.module.css';
 
-type SearchInputBarProps = {
+interface SearchInputBarProps {
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   inputRef: React.RefObject<HTMLInputElement>;
   placeholder: string;
-};
+}
 
 function SearchInputBar({
   value,
