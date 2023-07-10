@@ -17,6 +17,9 @@ function AutocompleteSearch() {
   };
 
   const handleProductClick = (product: Product) => {
+    /* This is not an optimal solution. It's just for 
+    demo purposes. Ideally, I'd use a modal or toast 
+    to show this to the user */
     // eslint-disable-next-line no-alert
     alert(`You have selected ${product.title}`);
     setQuery('');
